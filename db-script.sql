@@ -339,3 +339,72 @@ create table AFFECTATION
 );
 
 /*==============================================================*/
+
+
+/*===================================================================================================*/
+/* TRIGGER(DECLENCHEUR EN FRANCAIS) : SET_SANCTION                                                   */
+
+/*    ATTRIBUE AUTOMATIQUEMENT UNE SANCTION DISCIPLINAIRE EN
+       FONCTION DU NOMBRE D'HEURES D'ABSENCES NON JUSTIFIEE                                          */
+/*===================================================================================================*/
+/*---------------------------------------------------------------------------------------------------*/
+
+DELIMITER |
+CREATE TRIGGER SET_SANCTION AFTER INSERT ON ABSENCE FOR EACH ROW
+BEGIN
+
+      SELECT SUM(HOUR(DUREE)) INTO @nbrHA 
+      FROM absence
+            INNER JOIN seance_cours on absence.ID_SEANCE = seance_cours.ID_SEANCE 
+            INNER JOIN etudiant ON absence.MATRICULE = etudiant.MATRICULE
+            INNER JOIN AFFECTATION ON etudiant.MATRICULE = AFFECTATION.MATRICULE
+            LEFT JOIN ABSENCE_JUSTIFIEE ON ABSENCE_JUSTIFIEE.ID_ABSENCE <> ABSENCE.ID_ABSENCE 
+      WHERE
+            etudiant.MATRICULE = NEW.MATRICULE AND
+            seance_cours.DATE_COURS <= CURRENT_DATE();
+
+      CASE @nbrHA
+
+            WHEN 18 THEN
+                  INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
+                        VALUES 
+                        (1,NEW.MATRICULE,"20 heures d'absence non justifiée",NOW());
+                        
+            WHEN 20 THEN
+                  INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
+                        VALUES 
+                        (2,NEW.MATRICULE,"Plus de 20 heures d'absences non justifiée",NOW());
+            
+            WHEN 30 THEN
+                  INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
+                        VALUES 
+                        (3,NEW.MATRICULE,"Plus de 30 heures d'absences non justifiée",NOW());
+            11
+            WHEN 40 THEN
+                  INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
+                        VALUES 
+                        (4,NEW.MATRICULE,"Plus de 40 heures d'absences non justifiée",NOW());
+            
+            WHEN 50 THEN
+                  INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
+                        VALUES 
+                        (5,NEW.MATRICULE,"Plus de 50 heures d'absences non justifiée",NOW());
+            
+
+            WHEN 60 THEN
+                        INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
+                        VALUES 
+                        (6,NEW.MATRICULE,"Plus de 60 heures d'absences non justifiée",NOW());
+            ELSE 
+                  BEGIN 
+                        
+                  END;
+            
+      END CASE; 
+
+SET @nbrHA = NULL;
+
+END |
+DELIMITER ;
+
+/*====================================================================================================*/
