@@ -379,7 +379,7 @@ BEGIN
                   INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
                         VALUES 
                         (3,NEW.MATRICULE,"Plus de 30 heures d'absences non justifiée",NOW());
-            11
+            
             WHEN 40 THEN
                   INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
                         VALUES 
