@@ -320,12 +320,12 @@ create table RECEVOIR
 
 create table AFFECTATION
 (
-   `N°` int not null,
+   `NUMERO` int not null,
    MATRICULE            varchar(12) not null,
    CODE_CLASSE          varchar(6) not null,
    CODE_ANNEE           varchar(9) not null,
    
-   primary key (`N°`,MATRICULE, CODE_CLASSE, CODE_ANNEE),
+   primary key (`NUMERO`,MATRICULE, CODE_CLASSE, CODE_ANNEE),
 
    foreign key (CODE_CLASSE)
             references CLASSE (CODE_CLASSE) on delete cascade on update cascade,

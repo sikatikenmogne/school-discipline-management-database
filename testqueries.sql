@@ -3,7 +3,7 @@
 */
 
 SELECT DISTINCT
-      affectation.`N°`, 
+      affectation.`NUMERO`, 
       etudiant.NOM AS NOMS,
       etudiant.PRENOM AS PRENOMS,
       etudiant.MATRICULE AS `MATR.`,
@@ -23,7 +23,7 @@ FROM `absence`
 WHERE 
 	affectation.CODE_ANNEE = '2020/2021' AND
       affectation.CODE_CLASSE = 'L2C'
-ORDER BY affectation.`N°` 
+ORDER BY affectation.`NUMERO` 
 ASC; 
 
 
@@ -58,7 +58,7 @@ WHERE
       affectation.CODE_CLASSE = 'L2C' AND
       etudiant.MATRICULE = 'Mat119' AND
       absence.DEBUT_SEMAINE = '2021-02-01'
-ORDER BY affectation.`N°` 
+ORDER BY affectation.`NUMERO` 
 ASC; 
 
 
@@ -102,7 +102,7 @@ DESC;
 
 
 SELECT DISTINCT
-      affectation.`N°`, 
+      affectation.`NUMERO`, 
       etudiant.NOM AS NOMS,
       etudiant.PRENOM AS PRENOMS,
       etudiant.MATRICULE AS `MATR.`,
@@ -123,7 +123,7 @@ WHERE
 	affectation.CODE_ANNEE = '2020/2021' AND
       affectation.CODE_CLASSE = 'L2C' AND
       seance_cours.DATE_COURS = '2021-02-08'
-ORDER BY affectation.`N°` 
+ORDER BY affectation.`NUMERO` 
 ASC; 
 
 
@@ -134,7 +134,7 @@ ASC;
 
 /*
 SELECT DISTINCT
-      affectation.`N°` AS `N°`,
+      affectation.`NUMERO` AS `NUMERO`,
       etudiant.NOM AS NOMS,
       etudiant.PRENOM AS PRENOMS,
       etudiant.MATRICULE AS `MATR.`,
@@ -150,7 +150,7 @@ FROM `absence`
 WHERE 
 	affectation.CODE_ANNEE = '2020/2021' AND
       affectation.CODE_CLASSE = 'L2C' 
-ORDER BY affectation.`N°` 
+ORDER BY affectation.`NUMERO` 
 ASC; 
 */
 
@@ -161,7 +161,7 @@ ASC;
 /*CONNAITRE LE NOMBRE D'HEURES D'ABSENCES JUSTIFIEE ET NO JUSTIFIEE DES ETUDIANT DANS UNE SEMAINE ICI 2021-02-01 ET 2021-02-06*/
 
 SELECT 
-      affectation.`N°` AS N°,
+      affectation.`NUMERO` AS NUMERO,
       etudiant.NOM AS NOMS,
       etudiant.PRENOM AS PRENOMS,
       etudiant.MATRICULE AS `MATR.`,
@@ -177,9 +177,9 @@ WHERE
       affectation.CODE_CLASSE = 'L2C' AND
       absence.DEBUT_SEMAINE = '2021-02-01'
 GROUP BY 
-      `N°` 
+      `NUMERO` 
 ORDER BY 
-      `N°` 
+      `NUMERO` 
 ASC;
 
 
@@ -193,7 +193,7 @@ ASC;
 
 
 SELECT 
-      affectation.`N°` AS N°,
+      affectation.`NUMERO` AS NUMERO,
       etudiant.NOM AS NOMS,
       etudiant.PRENOM AS PRENOMS,
       etudiant.MATRICULE AS `MATR.`,
@@ -211,14 +211,14 @@ WHERE
 GROUP BY 
       etudiant.NOM 
 ORDER BY 
-      `N°` 
+      `NUMERO` 
 ASC;
 
 
 /*CONNAITRE LE NOMBRE D'HEURES D'ABSENCES JUSTIFIEE ET NO JUSTIFIEE DES ETUDIANT DANS UNE SEMAINE ICI 2021-02-01 ET 2021-02-06*/
 
 SELECT 
-      affectation.`N°` AS N°,
+      affectation.`NUMERO` AS NUMERO,
       etudiant.NOM AS NOMS,
       etudiant.PRENOM AS PRENOMS,
       etudiant.MATRICULE AS `MATR.`,
@@ -236,7 +236,7 @@ WHERE
 GROUP BY 
       etudiant.NOM 
 ORDER BY 
-      `N°` 
+      `NUMERO` 
 ASC;
       
 
@@ -249,7 +249,7 @@ ASC;
 */
 
 SELECT 
-      affectation.`N°` AS N°,
+      affectation.`NUMERO` AS NUMERO,
       etudiant.NOM AS NOMS,
       etudiant.PRENOM AS PRENOMS,
       etudiant.MATRICULE AS `MATR.`,
@@ -273,7 +273,7 @@ GROUP BY ETUDIANT.MATRICULE;
 LISTER PAR ORDRE DECROISSANT LES LE NOMBRE D'HEURES D'ABSENCE NON JUSTIFIEE ENTRE JANVIER ET MARS 
 */
 SELECT 
-      affectation.`N°` AS N°,
+      affectation.`NUMERO` AS NUMERO,
       etudiant.NOM AS NOMS,
       etudiant.PRENOM AS PRENOMS,
       SUM(IF(absence.ID_ABSENCE = absence_justifiee.ID_ABSENCE,0,HOUR(seance_cours.DUREE)))  AS `TOTAL N.J`
@@ -301,7 +301,7 @@ LISTER PAR ORDRE DECROISSANT DE GRAVITE LES ETUDIANTS D'UNE CLASSE
 */
 
 SELECT 
-      affectation.`N°` AS N°,
+      affectation.`NUMERO` AS NUMERO,
       etudiant.NOM AS NOMS,
       etudiant.PRENOM AS PRENOMS,
       etudiant.MATRICULE AS `MATR.`,
