@@ -1,6 +1,6 @@
 
 DROP DATABASE gestDiscipline;
-CREATE DATABASE gestDiscipline;
+CREATE DATABASE gestDiscipline CHARSET "UTF8";
 
 
 /*
