@@ -58,16 +58,16 @@ VALUES
 
 INSERT INTO ETUDIANT(MATRICULE, NOM,PRENOM, DATE_NAISS, SEXE) 
  VALUES 
-('Mat110',"stu_first_name_2","stu_sur_name_2" ,'2001-03-03'),
-('Mat111',"stu_first_name_3","stu_sur_name_3" ,'1994-04-22'),
-('Mat112',"stu_first_name_4","stu_sur_name_4" ,'1998-03-14'),
-('Mat113',"stu_first_name_5","stu_sur_name_5" ,'1994-12-17'),
-('Mat114',"stu_first_name_6","stu_sur_name_6" ,'1996-11-02'),
-('Mat115',"stu_first_name_7","stu_sur_name_7" ,'2000-12-07'),
-('Mat116',"stu_first_name_8","stu_sur_name_8" ,'1995-12-02'),
-('Mat117',"stu_first_name_9","stu_sur_name_9" ,'2002-02-28'),
-('Mat118',"stu_first_name_10","stu_sur_name_10" ,'1996-01-14'),
-('Mat119',"stu_first_name_11","stu_sur_name_11" ,'2002-02-19');
+('Mat110',"stu_first_name_2","stu_sur_name_2" ,'2001-03-03', 'M'),
+('Mat111',"stu_first_name_3","stu_sur_name_3" ,'1994-04-22', 'F'),
+('Mat112',"stu_first_name_4","stu_sur_name_4" ,'1998-03-14', 'M'),
+('Mat113',"stu_first_name_5","stu_sur_name_5" ,'1994-12-17', 'M'),
+('Mat114',"stu_first_name_6","stu_sur_name_6" ,'1996-11-02', 'F'),
+('Mat115',"stu_first_name_7","stu_sur_name_7" ,'2000-12-07', 'F'),
+('Mat116',"stu_first_name_8","stu_sur_name_8" ,'1995-12-02', 'M'),
+('Mat117',"stu_first_name_9","stu_sur_name_9" ,'2002-02-28', 'M'),
+('Mat118',"stu_first_name_10","stu_sur_name_10" ,'1996-01-14', 'F'),
+('Mat119',"stu_first_name_11","stu_sur_name_11" ,'2002-02-19', 'F');
 
 insert into CLASSE (CODE_CLASSE,CODE_ANNEE) 
 values
