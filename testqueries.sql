@@ -127,33 +127,6 @@ ORDER BY affectation.`NUMERO`
 ASC; 
 
 
-/*
-	CONNAITRE PRECISEMENT(TRANCHE HORAIRE, MATIERE, PROFFESEUR) TOUTES LES ABSENCE DES ETUDIANT DANS UNE SEMAINE ICI 2021-02-01 ET 2021-02-06
-*/
-
-
-/*
-SELECT DISTINCT
-      affectation.`NUMERO` AS `NUMERO`,
-      etudiant.NOM AS NOMS,
-      etudiant.PRENOM AS PRENOMS,
-      etudiant.MATRICULE AS `MATR.`,
-	seance_cours.CODE_HORAIRE AS TRANCHE_HORAIRES,
-	seance_cours.CODE_MATIERE AS MATIERES,
-	enseignant.NOM_ENS AS ENSEIGNANTS,
-	IF(absence.JUSTIFIEE = 0,"NON","OUI") AS JUSTIFIÉE
-FROM `absence` 
-	INNER JOIN etudiant ON etudiant.MATRICULE = absence.MATRICULE 
-	INNER JOIN seance_cours ON seance_cours.ID_SEANCE = absence.ID_SEANCE
-	INNER JOIN enseignant ON enseignant.MAT_ENS = seance_cours.MAT_ENS
-	INNER JOIN affectation ON affectation.MATRICULE = etudiant.MATRICULE
-WHERE 
-	affectation.CODE_ANNEE = '2020/2021' AND
-      affectation.CODE_CLASSE = 'L2C' 
-ORDER BY affectation.`NUMERO` 
-ASC; 
-*/
-
 
 
 
