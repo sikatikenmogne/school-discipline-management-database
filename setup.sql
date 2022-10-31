@@ -210,7 +210,7 @@ create table SEANCE_COURS
 (
    ID_SEANCE            int primary key auto_increment,
    CODE_CLASSE          varchar(6) not null,
-   CODE_DISP            int not null,
+   CODE_DISP            int,
    DATE_COURS           date not null,
    TRANCHE_HORAIRE      varchar(12),
    DUREE                time,
