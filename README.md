@@ -19,7 +19,7 @@ This database run on mysql version 5.7.31 on windows 10
 mysql -u <user_name> - p
 ```
 
-#### 1.1.2 Load sql DDL script
+#### 1.1.2 Load database script
 
 ```mysql
 mysql> \. setup.sql
@@ -53,7 +53,9 @@ This Database is shared with a Common Creative Licence : BY - NC - SA.
 
 [These queries are located to testqueries.sql](testqueries.sql)
 
-#### 2.2.1 Show precisely all the student absences resume during a week (2021-02-01 to 2021-02-06)
+#### 2.2.1 Example 1
+
+> Show precisely all the student absences resume during a week (2021-02-01 to 2021-02-06)
 
 ```mysql
 SELECT 
@@ -83,7 +85,9 @@ ASC;
 
 ![query_2_2_1_result](img/query_2_2_1_result.png)
 
-#### 2.2.2 List in descending order of gravity  the students going to the disciplinary council with thier sanctions in the school year
+#### 2.2.2 Example 2
+
+> List in descending order of gravity  the students going to the disciplinary council with thier sanctions in the school year
 
 ```mysql
 SELECT 
