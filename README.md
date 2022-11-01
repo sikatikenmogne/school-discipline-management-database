@@ -13,22 +13,22 @@ Database for school discipline management system.
 
 This database run on mysql version 5.7.31 on windows 10
 
-### 1.1.1 Connect to MySQL Server
+#### 1.1.1 Connect to MySQL Server
 
 ```mysql
-mysql -u root - p
+mysql -u <user_name> - p
 ```
 
-### 1.1.2 Load sql DDL script
+#### 1.1.2 Load sql DDL script
 
 ```mysql
-mysql> \. [path]\setup.sql
+mysql> \. setup.sql
 ```
 
-### 1.1.3 Load data
+#### 1.1.3 Load data
 
 ```mysql
-mysql> \. [path]\data.sql
+mysql> \. data.sql
 ```
 
 ### 1.2 Contribution
@@ -79,7 +79,7 @@ ORDER BY
 ASC;
 ```
 
-> Results
+##### 2.2.1.1. Results
 
 ![query_2_2_1_result](img/query_2_2_1_result.png)
 
@@ -113,6 +113,6 @@ ORDER BY
 DESC;
 ```
 
-> Results
+##### 2.2.2.1. Results
 
 ![query_2_2_2_result](img/query_2_2_2_result.png)
