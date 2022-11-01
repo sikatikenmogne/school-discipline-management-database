@@ -11,24 +11,24 @@ Database for school discipline management system.
 
 ### 1.1 Installation
 
-This database run on mysql version 5.7.31
+This database run on mysql version 5.7.31 on windows 10
 
-> 1
+### 1.1.1 Connect to MySQL Server
+
 ```mysql
 mysql -u root - p
-
-password ********
 ```
 
-> 2
+### 1.1.2 Load sql DDL script
+
 ```mysql
 mysql> \. [path]\setup.sql
 ```
 
-> 3
+### 1.1.3 Load data
 
 ```mysql
-mysql > \. [path]\data.sql
+mysql> \. [path]\data.sql
 ```
 
 ### 1.2 Contribution
@@ -41,7 +41,7 @@ This Database is shared with a Common Creative Licence : BY - NC - SA.
 
 ### 1.3 Authors
 
-![<img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="sikati kenmogne samuel" height="40" width="50" />](https://linkedin.com/in/samuel-sikati-kenmogne-57953a1b7) [Samuel SIKATI](https://linkedin.com/in/samuel-sikati-kenmogne-57953a1b7)
+![<img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" height="40" width="50"/>](https://linkedin.com/in/samuel-sikati-kenmogne-57953a1b7) [Samuel SIKATI](https://linkedin.com/in/samuel-sikati-kenmogne-57953a1b7)
 
 ## 2. Presentation and tutorial
 
