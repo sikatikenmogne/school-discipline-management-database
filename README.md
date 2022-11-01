@@ -41,7 +41,7 @@ This Database is shared with a Common Creative Licence : BY - NC - SA.
 
 ### 1.3 Authors
 
-![<img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" height="40" width="50"/>](https://linkedin.com/in/samuel-sikati-kenmogne-57953a1b7) [Samuel SIKATI](https://linkedin.com/in/samuel-sikati-kenmogne-57953a1b7)
+[SIKATI Samuel](https://linkedin.com/in/samuel-sikati-kenmogne-57953a1b7)
 
 ## 2. Presentation and tutorial
 
