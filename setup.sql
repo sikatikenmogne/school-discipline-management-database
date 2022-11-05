@@ -1,12 +1,12 @@
 
 DROP DATABASE gestDiscipline;
-CREATE DATABASE gestDiscipline CHARSET "UTF8";
+CREATE DATABASE gestDiscipline CHARSET "cp850";
 
 
 /*
-      dÃ©commentÃ© les lignes de codes ci dessus si vous
+      d‚comment‚ les lignes de codes ci dessus si vous
       voulez lancer le script plus facilement dans le shell
-      sans la requÃªte import. 
+      sans la requˆte import. 
 \
       Uncomment thes lines on top if you want to test the script
       in bash without the import query.
@@ -368,33 +368,33 @@ BEGIN
             WHEN 18 THEN
                   INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
                         VALUES 
-                        (1,NEW.MATRICULE,"20 heures d'absence non justifiÃ©e",NOW());
+                        (1,NEW.MATRICULE,"20 heures d'absence non justifi‚e",NOW());
                         
             WHEN 20 THEN
                   INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
                         VALUES 
-                        (2,NEW.MATRICULE,"Plus de 20 heures d'absences non justifiÃ©e",NOW());
+                        (2,NEW.MATRICULE,"Plus de 20 heures d'absences non justifi‚e",NOW());
             
             WHEN 30 THEN
                   INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
                         VALUES 
-                        (3,NEW.MATRICULE,"Plus de 30 heures d'absences non justifiÃ©e",NOW());
+                        (3,NEW.MATRICULE,"Plus de 30 heures d'absences non justifi‚e",NOW());
             
             WHEN 40 THEN
                   INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
                         VALUES 
-                        (4,NEW.MATRICULE,"Plus de 40 heures d'absences non justifiÃ©e",NOW());
+                        (4,NEW.MATRICULE,"Plus de 40 heures d'absences non justifi‚e",NOW());
             
             WHEN 50 THEN
                   INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
                         VALUES 
-                        (5,NEW.MATRICULE,"Plus de 50 heures d'absences non justifiÃ©e",NOW());
+                        (5,NEW.MATRICULE,"Plus de 50 heures d'absences non justifi‚e",NOW());
             
 
             WHEN 60 THEN
                         INSERT INTO RECEVOIR(ID_SANCTION,MATRICULE,MOTIF_SANCTION,DATE_SANCTION)
                         VALUES 
-                        (6,NEW.MATRICULE,"Plus de 60 heures d'absences non justifiÃ©e",NOW());
+                        (6,NEW.MATRICULE,"Plus de 60 heures d'absences non justifi‚e",NOW());
             ELSE 
                   BEGIN 
                         

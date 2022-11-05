@@ -105,12 +105,12 @@ VALUES
 
 INSERT INTO SANCTION(ID_SANCTION,LIBELLE_SANCTION)
 VALUES
-(1,'1er Avertissement ecrit'),
-(2,'2eme Avertissement ecrit'),
-(3,'BlÃ¢me'),
+(1,'1er avertissement ‚crit'),
+(2,'2eme avertissement ‚crit'),
+(3,'Blƒme'),
 (4,'Exclusion temporaire 3 jours'),
 (5,'Exclusion temporaire 8 jours'),
-(6,'Exclusion dÃ©finitive');
+(6,'Exclusion d‚finitive');
 
 INSERT INTO SEANCE_COURS( ID_SEANCE, CODE_CLASSE, CODE_DISP, TRANCHE_HORAIRE,DUREE, DATE_COURS) 
 VALUES 
