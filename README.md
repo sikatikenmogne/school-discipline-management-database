@@ -11,7 +11,9 @@ Database for school discipline management system.
 
 ### 1.1 Installation
 
-This database run on mysql version 5.7.31 on windows 10
+This database run with mysql version 5.7.31 on windows 10.
+
+Charset: CP850(DOS West European)
 
 #### 1.1.1 Connect to MySQL Server
 
